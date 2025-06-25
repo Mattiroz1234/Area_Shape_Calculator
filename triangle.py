@@ -12,4 +12,4 @@ class Triangle(Shape):
         return (self.bace * self.height) * 0.5
 
     def get_perimeter(self):
-        return None
+        return "not available"

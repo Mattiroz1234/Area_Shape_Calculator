@@ -11,3 +11,12 @@ class Shape(ABC):
     @abstractmethod
     def get_perimeter(self):
         pass
+
+    def __str__(self):
+        area_str = f"{self.get_area():.2f}"
+        try:
+            perimeter_str = f"{self.get_perimeter():.2f}"
+        except ValueError:
+            perimeter_str = self.get_perimeter()
+        return f"{self.name} | Area: {area_str} | Perimeter: {perimeter_str}"
+
